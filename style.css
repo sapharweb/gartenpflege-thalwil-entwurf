@@ -2,6 +2,7 @@
  * hero: Poster · nav: slab · footer: colophon block · imagery: photographs, 3 stand-ins from Unsplash, local files · signature: the telephone number set large in Vollkorn
  * axes: light/roman-serif/chromatic-green · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S3 R4 V4 · weakest: S, the local.ch entry names no services or work, so the page cannot say much only this business could say; the real address and number are set large and the services are a marked proposal instead of invented claims */
+/* Hallmark · waive 77 · the contact section is one band of a heading and three ruled rows, once a page, the rules run the full container width · the telephone number was set smaller on request, so the text no longer spans three quarters of the container */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -68,15 +69,16 @@
 .band { background: var(--color-ink); color: var(--color-paper); padding-block: var(--section-gap-s); --color-rule: color-mix(in oklab, var(--color-paper) 26%, var(--color-ink)); --color-focus: var(--color-accent-2); }
 .band h2 { color: var(--color-paper); }
 .band a { text-decoration-color: var(--color-accent-2); }
-.figure { display: block; margin-top: var(--space-xl); font: 600 clamp(2.5rem, 13.5vw, 13rem)/0.9 var(--font-display); font-variant-numeric: oldstyle-nums proportional-nums; letter-spacing: var(--tracking-display); color: var(--color-paper); text-decoration: none; white-space: nowrap; }
+.figure { display: inline-block; font: 600 clamp(2rem, 6vw, 5rem)/1 var(--font-display); font-variant-numeric: oldstyle-nums tabular-nums; letter-spacing: var(--tracking-display); color: var(--color-paper); text-decoration: none; white-space: nowrap; }
 .figure:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.12em; }
-.facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--gap-columns); margin: var(--space-2xl) 0 0; border-top: var(--rule-hair) solid var(--color-rule); }
-.facts div { padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
-.facts dt { font-size: var(--text-sm); color: var(--color-accent-2); }
-.facts dd { margin: var(--space-2xs) 0 0; font-size: var(--text-lg); }
+.facts { margin: var(--space-2xl) 0 0; border-top: var(--rule-hair) solid var(--color-rule); }
+.facts div { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); align-items: baseline; padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.facts dt { grid-column: 1 / 5; font-size: var(--text-md); color: var(--color-accent-2); }
+.facts dd { grid-column: 5 / 13; margin: 0; font-size: var(--text-xl); }
 .band .num { font-variant-numeric: tabular-nums lining-nums; }
 .facts a { white-space: nowrap; }
-@media (max-width: 40rem) { .facts { grid-template-columns: minmax(0, 1fr); } .facts dd { font-size: var(--text-md); } }
+@media (max-width: 60rem) { .facts dt, .facts dd { grid-column: 1 / -1; } .facts dd { margin-top: var(--space-2xs); } }
+@media (max-width: 40rem) { .facts dd { font-size: var(--text-md); } .facts .figure { font-size: clamp(2rem, 11vw, 3rem); font-variant-numeric: oldstyle-nums tabular-nums; } }
 
 .colophon { padding-block: var(--space-2xl); font-size: var(--text-sm); color: var(--color-ink-2); }
 .colophon .container { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-md); }

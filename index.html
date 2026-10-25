@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Garten-Profi Rico Jänsch, Gartenpflege in Thalwil (Entwurf)</title>
+  <meta name="description" content="Entwurf einer Webseite für Garten-Profi Rico Jänsch in Thalwil. Nicht die offizielle Seite des Betriebs.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#arbeiten">Zum Inhalt</a>
+
+  <div class="notice">
+    <div class="container">Entwurf von Sapir Harel, nicht die offizielle Seite von Garten-Profi Rico Jänsch.</div>
+  </div>
+
+  <header class="slab">
+    <div class="container">
+      <a class="wordmark" href="#" aria-label="Garten-Profi Rico Jänsch, Anfang der Seite">Garten-Profi Rico Jänsch</a>
+      <nav aria-label="Hauptmenü">
+        <a href="#arbeiten">Arbeiten</a>
+        <a href="#kontakt">Kontakt</a>
+        <a class="btn" href="tel:+41787288724" aria-label="Anrufen, 078 728 87 24">Anrufen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="titel">
+      <figure class="hero__photo" data-slot="hero" data-alt="Frisch gemähter Rasen in einem Garten mit Bäumen und Sträuchern am Rand">
+        <img src="img/rasen.jpg" width="2000" height="1500" alt="Frisch gemähter Rasen mit Streifen, am Rand Sträucher und Bäume" fetchpriority="high">
+      </figure>
+      <div class="hero__scrim" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <h1 id="titel">Gartenpflege aus Thalwil.</h1>
+        <p class="lead">Garten-Profi Rico Jänsch, Seestrasse 33. Rufen Sie an oder schreiben Sie.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:+41787288724"><span class="num">078 728 87 24</span>&nbsp;anrufen</a>
+          <a class="btn btn--ghost" href="mailto:gartenprofi.jaensch@gmail.com">E-Mail schreiben</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="work" id="arbeiten" aria-labelledby="arbeiten-titel">
+      <div class="container">
+        <div class="work__head">
+          <h2 id="arbeiten-titel">Arbeiten im Garten</h2>
+          <p class="lead">Ein Vorschlag. <span class="fill" data-fill="leistungen">Leistungen noch zu bestätigen</span></p>
+        </div>
+        <!-- Vorschlag, Kunde muss bestätigen: im local.ch Eintrag steht nur die Kategorie «Gartenbau und Gartenpflege», keine Leistungsliste. -->
+        <ul class="rows">
+          <li><h3>Rasen</h3><p>Mähen und pflegen.</p></li>
+          <li><h3>Hecken und Sträucher</h3><p>Schneiden und in Form halten.</p></li>
+          <li><h3>Beete</h3><p>Pflanzen, jäten, pflegen.</p></li>
+          <li><h3>Weiteres</h3><p>Nach Absprache am Telefon.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="shots" aria-label="Bilder von Gärten">
+      <div class="container">
+        <figure class="photo photo--a" data-slot="hecke" data-alt="Eine gepflegte Hecke entlang eines Rasenwegs, wie sie der Betrieb zeigen könnte">
+          <img src="img/hecke.jpg" width="1400" height="1867" alt="Geschnittene grüne Hecke neben einem Rasenweg mit einem Baum" loading="lazy">
+        </figure>
+        <figure class="photo photo--b" data-slot="beet" data-alt="Ein gepflegtes Beet mit Blumen, wie es der Betrieb zeigen könnte">
+          <img src="img/beet.jpg" width="1400" height="933" alt="Gelbe Sonnenhüte in einem Beet mit dunklem Mulch" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="band" id="kontakt" aria-labelledby="kontakt-titel">
+      <div class="container">
+        <h2 id="kontakt-titel">Anrufen oder schreiben</h2>
+        <a class="figure" href="tel:+41787288724" aria-label="Anrufen, 078 728 87 24">078 728 87 24</a>
+        <dl class="facts">
+          <div><dt>Adresse</dt><dd>Seestrasse 33, 8800 Thalwil</dd></div>
+          <div><dt>E-Mail</dt><dd><a href="mailto:gartenprofi.jaensch@gmail.com">gartenprofi.jaensch@gmail.com</a></dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="colophon">
+    <div class="container">
+      <p class="wordmark">Garten-Profi Rico Jänsch</p>
+      <p class="about">Angaben aus dem öffentlichen Eintrag auf local.ch, Texte neu geschrieben. Dies ist ein Entwurf von Sapir Harel und nicht die offizielle Seite des Betriebs. Die Seite setzt keine Cookies und verfolgt niemanden.</p>
+      <p data-credits>Fotos von MV Vacation, Sergej (skstrannik) und Jason Gooljar auf Unsplash, als Platzhalter.</p>
+    </div>
+  </footer>
+
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>
